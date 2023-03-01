@@ -40,7 +40,7 @@ spec:
         app: appleapi
     spec:
       containers:
-      - image: 236229348458.dkr.ecr.us-east-1.amazonaws.com/appleapi:70517706dc2c7a9abb273a95d1978a552e61b9e6
+      - image: 236229348458.dkr.ecr.us-east-1.amazonaws.com/appleapi:e6af9c7ee970290ba83630180e0333d5f5f1df3e
         imagePullPolicy: Always
         name: appleapi
         ports:
