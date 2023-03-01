@@ -1,0 +1,16 @@
+# resources:
+# - appleapi-deployment.yaml
+
+# commonLabels:
+#   owner: aryak
+
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+images:
+- name: 236229348458.dkr.ecr.us-east-1.amazonaws.com/appleapi
+  newTag: 2.0.0
+
+resources:
+- appleapi-deployment.yaml
