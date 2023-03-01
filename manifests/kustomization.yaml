@@ -10,7 +10,7 @@ kind: Kustomization
 
 images:
 - name: 236229348458.dkr.ecr.us-east-1.amazonaws.com/appleapi
-  newTag: 2.0.0
+  newTag: e6af9c7ee970290ba83630180e0333d5f5f1df3e
 
 resources:
 - appleapi-deployment.yaml
