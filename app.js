@@ -8,6 +8,11 @@ app.get('/', function (req, res) {
 app.get('/apple', function (req, res) {
   res.send('/apple/ ' + process.env.VERSION + " " + process.env.DB_USER + " " + process.env.DB_PASS);
 });
+
+app.get('/banana', function (req, res) {
+  res.send('/apple/banana ' + process.env.VERSION + " " + process.env.DB_USER + " " + process.env.DB_PASS);
+});
+
 app.listen(6003, function () {
   console.log('appleapi listening on port 6003!' + process.env.VERSION + " " + process.env.DB_USER + " " + process.env.DB_PASS);
 });
