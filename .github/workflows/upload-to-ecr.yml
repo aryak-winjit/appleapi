@@ -50,7 +50,7 @@ jobs:
       run: |
         # Build a docker container and push it to ECR 
         docker pull devopscube/kubernetes-job-demo:latest
-        # docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        # docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f ./Dockerfile .
         docker tag devopscube/kubernetes-job-demo:latest $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "Pushing image to ECR..."
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
