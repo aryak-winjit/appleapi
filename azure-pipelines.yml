@@ -15,6 +15,7 @@ variables:
   containerRegistry: 'docuveruspreprodacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
+  acr-registry: 'docuveruspreprodacr.azurecr.io'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -28,13 +29,33 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
-    - task: Docker@2
-      displayName: Build and push an image to container registry
+    # - task: Docker@2
+    #   displayName: Build and push an image to container registry
+    #   inputs:
+    #     command: buildAndPush
+    #     repository: $(imageRepository)
+    #     dockerfile: $(dockerfilePath)
+    #     containerRegistry: $(dockerRegistryServiceConnection)
+    #     tags: |
+    #       $(tag)
+    - task: DockerInstaller@0
       inputs:
-        command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
+        dockerVersion: '17.09.0-ce'
+    - task: CmdLine@2
+      displayName: docker login
+      inputs:
+        script: |
+          docker login $(acr-registry) \
+          --username  $(username) \
+          --password $(password)
+    - task: CmdLine@2
+      displayName: Build and push image
+      inputs:
+        script: |
+          docker build . -t $(acr-registry)\$(imageRepository):$(tag)
+          docker push $(acr-registry)\$(imageRepository):$(tag)
+    - task: CmdLine@2
+      displayName: Docker Logout
+      inputs:
+        script: 'docker logout $(acr-registry)' 
 ...
