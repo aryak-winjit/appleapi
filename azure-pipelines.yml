@@ -14,7 +14,7 @@ variables:
   imageRepository: 'appleapi'
   containerRegistry: 'docuveruspreprodacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)-$(SourceBranchName)'
+  tag: '$(Build.BuildId)000000$(SourceBranchName)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
