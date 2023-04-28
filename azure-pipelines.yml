@@ -52,8 +52,8 @@ stages:
       displayName: Build and push image
       inputs:
         script: |
-          docker build . -t $(acr-registry)\$(imageRepository):$(tag)
-          docker push $(acr-registry)\$(imageRepository):$(tag)
+          docker build . -t $(acr-registry)/$(imageRepository):$(tag)
+          docker push $(acr-registry)/$(imageRepository):$(tag)
     - task: CmdLine@2
       displayName: Docker Logout
       inputs:
