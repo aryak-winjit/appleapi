@@ -33,5 +33,5 @@ fs.readFile('./secret/secret.txt', 'utf8', (err, data) => {
 
 
 app.listen(6003, function () {
-  console.log('appleapi listening on port 6003!' + process.env.VERSION + " " + process.env.DB_USER + " " + process.env.DBPASS);
+  console.log('appleapi listening on port 6003!!!!!' + process.env.VERSION + " " + process.env.DB_USER + " " + process.env.DBPASS);
 });
