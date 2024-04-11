@@ -1,0 +1,9 @@
+.env
+
+.git
+.github
+run.bat
+run.sh
+temp.bat
+azure-pipelines.yml
+node_modules
