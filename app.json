@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "name": "applapi-service",
+            "script": "node app.js",
+            "log_file": "D:\\nodejs\\appleapi\\app.log",
+            "error_file": "D:\\nodejs\\appleapi\\app-error.log",
+            "out_file": "D:\\nodejs\\appleapi\\app-output.log",
+            "log_date_format": "YYYY-MM-DD HH:mm Z"
+        }
+    ]
+}
