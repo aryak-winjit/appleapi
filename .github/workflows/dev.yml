@@ -1,7 +1,13 @@
 # add ACCESS_KEY, SECRET_KEY, REPO_NAME into secret github actions.
 on:
-  # push:
-  #   branches: [ main ]
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+  pull_request:
+    types: [opened, synchronize]
+    paths-ignore:
+      - 'README.md'
   workflow_dispatch:
 
 name: upload image ECR
