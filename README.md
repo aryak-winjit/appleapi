@@ -21,6 +21,7 @@ npm install
 # node app.js
 
 pm2 start "npm run start" --name appleapi
+# edited
 ```
 
 
