@@ -27,6 +27,7 @@ CMD [ "node", "app.js" ]
 # ENV WORKING_DIR=/usr/src/app
 
 # WORKDIR ${WORKING_DIR}
+#edited
 # RUN chown node:node ${WORKING_DIR}
 
 # COPY --chown=node:node .npmrc .
