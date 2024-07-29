@@ -1,15 +1,15 @@
 {
     "apps": [
         {
-            "name": "applapi-service",
+            "name": "appleapi-service",
             "script": "app.js",
             "autorestart": true,
             "log_file": "./log/app.log",
             "error_file": "./log/error.log",
             "out_file": "./log/output.log",
             "log_date_format": "YYYY-MM-DD HH:mm Z",
-            "instances": 2,
-            "exec_mode": "cluster"
+            "instances": 1,
+            "exec_mode": "fork"
         }
     ]
 }

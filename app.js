@@ -10,6 +10,9 @@ var env_data_owner = process.env.OWNER;
 app.get('/', function (req, res) {
   res.send('Apple API! v0.5');
 });
+app.get('/health', function (req, res) {
+  res.send('OK');
+});
 app.get('/apple', function (req, res) {
   res.send('/apple/ ' + process.env.VERSION + " | DB_USER: " + process.env.DB_USER + " | DB_PASS: " + process.env.DB_PASS + " | owner: " + process.env.OWNER);
 });
