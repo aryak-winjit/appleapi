@@ -146,5 +146,5 @@ app.get('/ram', (req, res) => {
 
 
 app.listen(6003, function () {
-  console.log('appleapi listening on port 6003!' + process.env.VERSION + " " + process.env.DB_USER + " " + process.env.DB_PASS);
+  console.log('appleapi listening on port 6003!!' + process.env.VERSION + " " + process.env.DB_USER + " " + process.env.DB_PASS);
 });
