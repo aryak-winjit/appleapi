@@ -17,5 +17,3 @@ jobs:
       
     - name: Branch name
       run: echo running on branch ${GITHUB_REF##*/}
-    - name: Branch name
-      run: echo running on branch ${GITHUB_REF##*/}

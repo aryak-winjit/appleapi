@@ -24,7 +24,7 @@ jobs:
       with:
         filters: |
           workflows:
-            - '.github/dev/**'
+            - '.github/workflows/dev/**'
     # run only if 'workflows' files were changed
     - name: workflow tests
       if: steps.filter.outputs.workflows == 'true'
