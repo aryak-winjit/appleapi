@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
   database: process.env.DB_NAME   // Replace with your database name
 });
 
-// Connect to the database
+// Connect to the database(s)
 connection.connect((err) => {
   if (err) {
     console.error('Error connecting to MySQL:', err);

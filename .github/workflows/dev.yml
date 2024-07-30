@@ -65,6 +65,6 @@ jobs:
     - name: Echo
       run: echo "pipeline running"
       if: needs.paths-filter.outputs.output1 == 'true'
-    - name: Echo
+    - name: Echo DB
       run: echo "pipeline running"
       if: needs.paths-filter.outputs.output2 == 'true'
