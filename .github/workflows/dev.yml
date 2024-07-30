@@ -16,7 +16,8 @@ jobs:
   paths-filter:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.filter.outputs.workflows }}
+      - output1: ${{ steps.filter.outputs.workflows }}
+      - output2: ${{ steps.filter.outputs.db }}
     steps:
     - uses: actions/checkout@v4
     - uses: dorny/paths-filter@v3
@@ -25,6 +26,8 @@ jobs:
         filters: |
           workflows:
             - '.github/workflows/dev/**'
+          db: 
+            - 'database.js'
     # run only if 'workflows' files were changed
     - name: workflow tests
       if: steps.filter.outputs.workflows == 'true'
@@ -62,3 +65,6 @@ jobs:
     - name: Echo
       run: echo "pipeline running"
       if: needs.paths-filter.outputs.output1 == 'true'
+    - name: Echo
+      run: echo "pipeline running"
+      if: needs.paths-filter.outputs.output2 == 'true'
