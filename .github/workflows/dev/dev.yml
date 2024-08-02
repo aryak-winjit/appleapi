@@ -1,4 +1,4 @@
-# add ACCESS_KEY, SECRET_KEY, REPO_NAME into secret github actions. #### 
+# add ACCESS_KEY, SECRET_KEY, REPO_NAME into secret github actions.
 on:
   # push:
   #   branches: [ main ]
