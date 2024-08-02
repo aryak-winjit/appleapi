@@ -25,7 +25,7 @@ jobs:
       with:
         filters: |
           workflows:
-            - '.github/workflows/dev/**'
+            - '.github/workflows/dev'
           db: 
             - 'database.js'
     # run only if 'workflows' files were changed
